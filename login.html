@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		body {
+			background-color: #F9F9F9;
+			width: 100%;
+			height: 13.34rem;
+
+		}
+
+		.header {
+			width: 100%;
+			height: 1.27rem;
+			background-color: #ff9326;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+
+		.header img {
+			padding-top: 0.3rem;
+			width: 0.16rem;
+			height: 0.36rem;
+			padding-left: 0.4rem;
+		}
+
+		.header h1 {
+			padding-top: 0.3rem;
+			font-size: 0.36rem;
+			color: #fff2ea;
+			letter-spacing: 0.1rem;
+		}
+
+		.header span {
+			padding-top: 0.3rem;
+			font-size: 0.24rem;
+			color: #fff2ea;
+			padding-right: 0.4rem;
+		}
+
+		.login-nav {
+			width: 7.1rem;
+			height: 11.33rem;
+			background-color: #FFFFFF;
+			margin: 0 auto;
+			margin-top: 0.33rem;
+		}
+
+		.login-nav img {
+			padding-top: 0.98rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.login-nav p {
+			color: #333333;
+			font-size: 0.24rem;
+			text-align: center;
+			padding-top: 0.3rem;
+		}
+
+		form input {
+			margin: 0 auto;
+			width: 4.7rem;
+			height: 0.8rem;
+			border: 1px solid #dadada;
+			border-radius: 2px;
+			padding-left: 1.3rem;
+		}
+
+		form p {
+			position: relative;
+		}
+
+		form p:nth-child(1) {
+			margin-top: 1.34rem;
+		}
+
+		form p:nth-child(2) {
+			margin-top: 0.33rem;
+		}
+
+		form p label {
+			position: absolute;
+			font-size: 0.24rem;
+			line-height: 0.8rem;
+			padding-left: 0.3rem;
+		}
+
+		form label>span {
+
+			padding-left: 0.15rem;
+		}
+
+		.check {
+			font-size: 0.2rem;
+			margin: 0 auto;
+		}
+
+		.check input {
+			width: 0.02rem;
+			height: 0.2rem;
+
+		}
+
+		.check span {
+			color: #d6d6d6;
+		}
+
+		.check a:nth-child(1) {
+			color: #FF9326;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./css/fontawesome.min.css" />
+	<body>
+		<div class="header">
+			<img src="./icon/back.png">
+			<h1>登录</h1>
+			<a href=""><span>注册</span></a>
+		</div>
+		<div class="login-nav">
+			<img src="./icon/logo.png">
+			<p>天眼购吧</p>
+			<form action="" method="post">
+				<p>
+					<label for="phone">账号<span>:</span></label><input id="phone" type="phone" name="phone" value="" placeholder="请输入手机号">
+				</p>
+				<p>
+					<label for="password">密码<span>:</span></label><input id="password" type="password" name="password" value=""
+					 placeholder="请输入密码">
+				</p>
+				<p class="check">
+					<input type="radio" name="type" id="adviceRadio1" value="1" />
+								    <label for="adviceRadio1" class="advice"></label>
+					<span>已阅读并同意以下协议:<a href="">用户协议及隐私</a></span>
+					<a href="">忘记密码?</a>
+				</p>
+			</form>
+		</div>
+	</body>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+				dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+				dpr = window.top === window.self ? dpr : 1,
+				dpr = 1,
+				scale = 1 / dpr,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			docEl.dataset.dpr = dpr;
+			var metaEl = doc.createElement('meta');
+			metaEl.name = 'viewport';
+			metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+			docEl.firstElementChild.appendChild(metaEl);
+			var recalc = function() {
+				var width = docEl.clientWidth;
+				if (width / dpr > 750) {
+					width = 750 * dpr;
+				}
+				// 乘以100，px : rem = 100 : 1
+				docEl.style.fontSize = 100 * (width / 750) + 'px';
+			};
+			recalc()
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+		})(document, window);
+	</script>
+</html>
