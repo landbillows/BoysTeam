@@ -1,0 +1,205 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+nav{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 50px;
+  .shopping-cart{
+    width: 80px;
+    line-height: 50px;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .admin{
+    position: absolute;
+    right: calc(70px / 2 - 36px);
+    top: calc(50px / 2 - 18px);
+    width: 70px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(199, 199, 199);
+    font-size: 18px;
+    font-weight: 530;
+  }
+}
+
+main{
+  background: rgb(248, 248, 248);
+  width: 100%;
+  height: 665px;
+  .container{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    span{
+      display: inline-block;
+      font-size: 12px;
+      color: rgb(179, 179, 179);
+    }
+    .wraper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 20px;
+      background: #fff;
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+      .left-bottom{
+        background: url(../images/lipstick.png) no-repeat center;
+      }
+      .left{
+        background: url(../images/lip\ rouge.png) no-repeat center;
+      }
+      .left,.left-bottom{
+       
+        background-size: 100%;
+        width: 140px;
+        height: 180px;
+      }
+      .right{
+        position: relative;
+        h4{
+          font-weight: 400;
+          color: #333;
+        }
+        .price{
+          color: red;
+        }
+        .volume{
+          margin: 10px 0;
+         width: 60px;
+         padding: 5px;
+          background: rgb(247, 247, 247);
+          font-size: 14px;
+          color: #999;
+        }
+        .courret{
+          position:absolute;
+          bottom: 0;
+          right: 0;
+        .app{
+          position: relative;
+          box-sizing: border-box;
+          border: 1px solid #ddd;
+          width:72px;
+          height: 20px;
+          text-align: center;
+          line-height: 18px;
+          color: #999;
+          .sub,.add{
+            position: absolute;
+            top: calc(-20px /2 + 10px);
+            box-sizing: border-box;
+            border: 1px solid #e4e4e4;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 18px;
+            border-bottom: none;
+          }
+          .sub{
+            border-left: none;
+            left: 0;
+          }
+          .add{
+            border-right: none;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+aside{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 15px;
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  .left{
+    width: 100px;
+    height: 50%;
+    color: #999999;
+  }
+  .right{
+    width: 400px;
+    height: 50%;
+    text-align: right;
+    color: #888888;
+    .sum{
+      display: inline-block;
+      margin-right: 10px;
+      span{
+        &:nth-last-child(1){
+          color: red;
+        }
+      }
+    }
+    button{
+      background: rgb(255,147,38);
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      width: 80px;
+      height: 30px;
+      color: #fff;
+    }
+  }
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  background: #f8f8f8;
+  border-top: 1px solid rgb(238, 238, 238);
+  // background: red;
+  width: 100%;
+  height: 60px;
+  .first,.second,.third,.fouth{
+    // margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    background: red;
+    
+  }
+  .first{
+    background: url(../images/house.png) no-repeat ;
+    background-size: 75%;
+  }
+  .second{
+    background: url(../images/more.png) no-repeat ;
+    background-size: 75%;
+  }
+  .third{
+    background: url(../images/shop.png) no-repeat ;
+    background-size: 75%;
+  }
+  .fouth{
+    background: url(../images/user.png) no-repeat ;
+    background-size: 75%;
+  }
+}
